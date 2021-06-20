@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="userslist"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div *ngIf="character">
+  <ion-card>
+    <ion-card-content class="ion-text-center">
+      <img src="{{character.image}}" alt="">
+     
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-icon class="space" name="person-circle-outline"></ion-icon> <ion-label>Nombre</ion-label>
+        </ion-item-divider>
+        <ion-item class="ion-text-center">
+          <ion-label>{{character.name}}</ion-label>
+        </ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-icon class="space" name="battery-charging-outline"></ion-icon><ion-label>Estado</ion-label>
+        </ion-item-divider>
+        <ion-item class="ion-text-center">
+          <ion-label>{{character.status}}</ion-label>
+        </ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-icon class="space" name="finger-print-outline"></ion-icon><ion-label>Especie</ion-label>
+        </ion-item-divider>
+        <ion-item class="ion-text-center">
+          <ion-label>{{character.species}}</ion-label>
+        </ion-item>
+      </ion-item-group>
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
